@@ -1,0 +1,79 @@
+---
+import { Icon } from 'astro-icon/components';
+import './header.css';
+---
+
+<header class="header wrapper">
+  <div class="header__container wrapper">
+    <div class="header__content">
+      <div class="header__actions">
+        <button
+          popovertarget="mobile-navigation"
+          popovertargetaction="show"
+          class="header__toggle"
+          aria-label="toggle open menu"
+        >
+          <Icon name="menu" />
+        </button>
+      </div>
+      <a class="header__logo" href="/" aria-label="retur to home">
+        <Icon name="logo" class="header__image" />
+
+        <h1 class="header__title">Hotel <span>Miranda</span></h1>
+      </a>
+    </div>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="./about_us.html" aria-label="go to About-us">About Us </a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="./room.html" aria-label="go to Rooms">Rooms </a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="./our_offer.html" aria-label="go to Offers">Offers </a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="./contact.html" aria-label="go to Contact">Contact </a>
+        </li>
+      </ul>
+    </nav>
+
+    <ul class="header__list">
+      <li class="header__item">
+        <a class="header__link" href="#">
+          <Icon name="profile" class="header__icon" />
+        </a>
+      </li>
+      <li class="header__item">
+        <a class="header__link" href="#">
+          <Icon name="search" class="header__icon" />
+        </a>
+      </li>
+    </ul>
+  </div>
+  <nav popover class="header__mobile wrapper" id="mobile-navigation">
+    <button
+      popovertarget="mobile-navigation"
+      popovertargetaction="hide"
+      class="header__close header__toggle--hidden"
+      aria-label="button close menu"
+    >
+      <Icon name="cross" />
+    </button>
+    <ul class="header__mobile-list">
+      <li class="header__mobile-item">
+        <a class="header__mobile-link" href="./about_us.html" aria-label="go to About-us">About Us </a>
+      </li>
+      <li class="header__mobile-item">
+        <a class="header__mobile-link" href="./room.html" aria-label="go to Rooms">Rooms </a>
+      </li>
+      <li class="header__mobile-item">
+        <a class="header__mobile-link" href="./our_offer.html" aria-label="go to Offers">Offers </a>
+      </li>
+      <li class="header__mobile-item">
+        <a class="header__mobile-link" href="./contact.html" aria-label="go to Contact">Contact </a>
+      </li>
+    </ul>
+  </nav>
+</header>

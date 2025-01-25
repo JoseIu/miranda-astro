@@ -1,5 +1,6 @@
 ---
 import Header from '@/components/header/Header.astro';
+import { ClientRouter } from 'astro:transitions';
 import '../styles/reset.css';
 
 interface Props {
@@ -19,6 +20,7 @@ const layOutTitle = title ?? 'Hotel Miranda';
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{layOutTitle}</title>
+    <ClientRouter />
   </head>
   <body>
     <Header />

@@ -1,6 +1,9 @@
 ---
+import { NAV_LINKS } from '@/constants/navLinks';
 import { Icon } from 'astro-icon/components';
 import './header.css';
+const normalizePath = (path: string) => path.replace(/\/$/, '') || '/';
+const currentPath = normalizePath(Astro.url.pathname);
 ---
 
 <header class="header wrapper">
@@ -19,23 +22,22 @@ import './header.css';
       <a class="header__logo" href="/" aria-label="retur to home">
         <Icon name="logo" class="header__image" />
 
-        <h1 class="header__title">Hotel <span>Miranda</span></h1>
+        <span class="header__title">Hotel <span>Miranda</span></span>
       </a>
     </div>
     <nav class="header__nav">
       <ul class="header__nav-list">
-        <li class="header__nav-item">
-          <a class="header__nav-link" href="./about_us.html" aria-label="go to About-us">About Us </a>
-        </li>
-        <li class="header__nav-item">
-          <a class="header__nav-link" href="./room.html" aria-label="go to Rooms">Rooms </a>
-        </li>
-        <li class="header__nav-item">
-          <a class="header__nav-link" href="./our_offer.html" aria-label="go to Offers">Offers </a>
-        </li>
-        <li class="header__nav-item">
-          <a class="header__nav-link" href="./contact.html" aria-label="go to Contact">Contact </a>
-        </li>
+        {
+          NAV_LINKS.map(({ text, href }) => (
+            <li class="header__nav-item">
+              <a class="header__nav-link" href={href} aria-label={text}>
+                {text}
+              </a>
+
+              {currentPath === href && <div class="active" transition:name="menu-line" />}
+            </li>
+          ))
+        }
       </ul>
     </nav>
 
@@ -62,18 +64,16 @@ import './header.css';
       <Icon name="cross" />
     </button>
     <ul class="header__mobile-list">
-      <li class="header__mobile-item">
-        <a class="header__mobile-link" href="./about_us.html" aria-label="go to About-us">About Us </a>
-      </li>
-      <li class="header__mobile-item">
-        <a class="header__mobile-link" href="./room.html" aria-label="go to Rooms">Rooms </a>
-      </li>
-      <li class="header__mobile-item">
-        <a class="header__mobile-link" href="./our_offer.html" aria-label="go to Offers">Offers </a>
-      </li>
-      <li class="header__mobile-item">
-        <a class="header__mobile-link" href="./contact.html" aria-label="go to Contact">Contact </a>
-      </li>
+      {
+        NAV_LINKS.map(({ text, href }) => (
+          <li class="header__mobile-item">
+            <a class="header__mobile-link" href={href} aria-label={text}>
+              {text}
+            </a>
+            {currentPath === href && <div class="mobile-active" />}
+          </li>
+        ))
+      }
     </ul>
   </nav>
 </header>

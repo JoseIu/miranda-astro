@@ -17,7 +17,7 @@ const layOutTitle = title ?? 'Hotel Miranda';
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.webp" />
     <meta name="generator" content={Astro.generator} />
     <title>{layOutTitle}</title>
     <ClientRouter />
@@ -34,5 +34,16 @@ const layOutTitle = title ?? 'Hotel Miranda';
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
+  }
+  .button {
+    color: var(--white-color);
+    background-color: var(--tbn-color);
+    width: 13.5rem;
+    height: 3.75rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
   }
 </style>

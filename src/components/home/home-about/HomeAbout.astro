@@ -1,0 +1,45 @@
+---
+import { Icon } from 'astro-icon/components';
+import './homeAbout.css';
+---
+
+<section class="about wrapper">
+  <div class="about__content">
+    <p class="about__subtitle">About Us</p>
+    <div class="about__bg">
+      <h3 class="about__title">Discover Our Underground.</h3>
+      <p class="about__description">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat.
+      </p>
+      <button class="button" aria-label="button to book now">Book Now</button>
+    </div>
+  </div>
+
+  <div class="about__images">
+    <article class="card card--order">
+      <img class="card__image card__image--order" src="./images/about.webp" alt="about image" />
+
+      <div class="card__content card__content--bg">
+        <Icon class="card__content-image" name="cardPeople" />
+
+        <h3 class="card__content-title">Strong Team</h3>
+        <p class="card__content-description">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+        </p>
+      </div>
+    </article>
+    <article class="card">
+      <img class="card__image" src="./images/about-2.webp" alt="about image" />
+
+      <div class="card__content card__content--dark">
+        <Icon class="card__content-image" name="calendar" />
+        <h3 class="card__content-title">Luxury Room</h3>
+        <p class="card__content-description">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+        </p>
+      </div>
+    </article>
+  </div>
+</section>

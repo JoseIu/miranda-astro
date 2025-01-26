@@ -1,0 +1,103 @@
+.about {
+  padding: 1em;
+  font-weight: 400;
+  margin-bottom: 10em;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  @media screen and (min-width: 1000px) {
+    grid-template-columns: 35.5rem 1fr;
+    gap: 2rem;
+
+    .about__content {
+      order: 2;
+    }
+    .about__images {
+      order: 1;
+    }
+  }
+  .about__content {
+    @media screen and (min-width: 1000px) {
+      padding-top: 6em;
+    }
+  }
+  .about__bg {
+  }
+  .about__subtitle {
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  .about__title {
+    margin: 0;
+    max-width: 34.1875em;
+    font-size: clamp(3.5rem, 5vw, 5rem);
+  }
+  .about__description {
+    font-size: clamp(0.875rem, 2vw, 1.125rem);
+    max-width: 24.8125em;
+    margin-bottom: 2em;
+
+    line-height: 1.5em;
+  }
+  .about__images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    justify-items: center;
+    justify-content: stretch;
+    gap: 1.5em;
+
+    @media screen and (min-width: 1000px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+.card {
+  .card__image {
+    font-size: 2.3rem;
+  }
+  .card__image--order {
+    order: 2;
+  }
+  .card__content {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1em;
+    background-color: var(--white-color);
+  }
+  .card__content-image {
+    font-size: 3.4rem;
+  }
+  .card__content-title {
+    font-weight: 400;
+    font-size: clamp(1.7rem, 3vw, 1.8rem);
+    margin: 0;
+  }
+  .card__content-description {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    text-align: center;
+  }
+  .card__content--dark {
+    background-color: var(--black-color);
+    color: var(--white-color);
+  }
+  .card__content--bg {
+    padding: 1rem;
+    order: 1;
+    background-image: url(./images/people.webp);
+    background-repeat: no-repeat;
+    background-position: top 3em right 1.5em;
+  }
+}
+.card--order {
+  @media screen and (min-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+  }
+}

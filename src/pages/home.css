@@ -1,0 +1,55 @@
+.home {
+  padding: 1em;
+  min-height: 90dvh;
+  color: var(--white-color);
+  background-image: url(./images/bg-home-2.webp);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  background-attachment: fixed;
+  .home__content {
+    padding: 5em 0 0 0;
+
+    @media screen and (min-width: 600px) {
+      padding: 5em 0 0 3em;
+    }
+  }
+
+  .home__subtitle {
+    font-size: clamp(0.9, 1vw, 0.875rem);
+    display: block;
+  }
+  .home__title {
+    max-width: 43.3125rem;
+    font-size: clamp(3.3rem, 10vw, 7.1rem);
+    letter-spacing: 0.1375rem;
+    text-wrap: wrap;
+  }
+  .home__tbns {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .home__btn {
+    width: 13.5rem;
+    height: 3.75rem;
+
+    text-transform: uppercase;
+    outline: 0.0625rem solid var(--white-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 1em;
+  }
+  .home__btn--mustard {
+    background-color: var(--mustard-color);
+    outline: none;
+  }
+
+  .home__date {
+    background-color: var(---black-color);
+  }
+}

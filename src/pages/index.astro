@@ -1,11 +1,29 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import CheckAvailability from '@/components/home/check-availability/CheckAvailability.astro';
+import HomeAbout from '@/components/home/home-about/HomeAbout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import EmblaCarousel from '@/components/react/EmblaCarousel';
+import Layout from '../layouts/Layout.astro';
+import './home.css';
 ---
 
-<Layout>
-  <Welcome />
+<Layout title="Hotel Miranda">
+  <section>
+    <section class="home">
+      <div class="home__content wrapper">
+        <span class="home__subtitle">THE ULTIMATE LUXURY EXPERIENCE</span>
+        <h2 class="home__title">The Perfect Base For You</h2>
+
+        <div class="home__tbns">
+          <a class="home__btn home__btn--mustard" href="#">Take a Tour</a>
+          <a class="home__btn" href="#">Learn more</a>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <CheckAvailability />
+  <HomeAbout />
+
+  <EmblaCarousel client:only="react" />
 </Layout>

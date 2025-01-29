@@ -64,7 +64,7 @@
 img,
 picture,
 video,
-iframe,
+svg iframe,
 figure {
   max-width: 100%;
   width: 100%;
@@ -89,8 +89,9 @@ p a {
 li {
   list-style-type: none;
 }
-nav ul {
+ul {
   padding: 0;
+  margin: 0;
 }
 
 html {

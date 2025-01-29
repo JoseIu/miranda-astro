@@ -1,0 +1,101 @@
+---
+import './coreFeatures.css';
+type Props = {
+  isDark?: boolean;
+};
+const { isDark } = Astro.props;
+const featuresClass = isDark && 'features--dark';
+const featureClass = isDark && 'feature--dark';
+---
+
+<section class={`features  ${featuresClass}`}>
+  <div class="wrapper">
+    <p class="features__subtitle">Facilities</p>
+    <h3 class="features__title">Core Features</h3>
+
+    <div class="features__list">
+      <!-- 1 -->
+      <article class={`feature ${featureClass}`}>
+        <img class="feature__img" src="/images/features/starts.svg" alt="rating icon" loading="lazy" />
+
+        <div class="feature__content">
+          <h3 class="feature__title">Have High Rating</h3>
+          <p class="feature__desctiption">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna..
+          </p>
+        </div>
+      </article>
+      <!-- 2-->
+      <article class={`feature ${featureClass}`}>
+        <img class="feature__img" src="/images/features/clock.svg" alt="quiet Hours icon" loading="lazy" />
+
+        <div class="feature__content">
+          <h3 class="feature__title">Quiet Hours</h3>
+          <p class="feature__desctiption">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna..
+          </p>
+        </div>
+      </article>
+      <!-- 3 -->
+      <article class={`feature ${featureClass}`}>
+        <img
+          class="feature__img"
+          src="/images/features/location.svg"
+          alt="best location icon"
+          loading="lazy"
+        />
+
+        <div class="feature__content">
+          <h3 class="feature__title">Best Locations</h3>
+          <p class="feature__desctiption">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna..
+          </p>
+        </div>
+      </article>
+      <!-- 4-->
+      <article class={`feature ${featureClass}`}>
+        <img
+          class="feature__img"
+          src="/images/features/clock-cross.svg"
+          alt="free Cancellation icon"
+          loading="lazy"
+        />
+
+        <div class="feature__content">
+          <h3 class="feature__title">Free Cancellation</h3>
+          <p class="feature__desctiption">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna..
+          </p>
+        </div>
+      </article>
+      <!-- 5 -->
+      <article class={`feature ${featureClass}`}>
+        <img class="feature__img" src="/images/features/credit.svg" alt="payment card icon" loading="lazy" />
+
+        <div class="feature__content">
+          <h3 class="feature__title">Payment Options</h3>
+          <p class="feature__desctiption">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna..
+          </p>
+        </div>
+      </article>
+      <!-- 6 -->
+      <article class={`feature ${featureClass}`}>
+        <img class="feature__img" src="/images/features/offer.svg" alt="Special Offers icon" loading="lazy" />
+
+        <div class="feature__content">
+          <h3 class="feature__title">Special Offers</h3>
+          <p class="feature__desctiption">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna..
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

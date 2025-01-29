@@ -2,7 +2,11 @@
 import CheckAvailability from '@/components/home/check-availability/CheckAvailability.astro';
 import HomeAbout from '@/components/home/home-about/HomeAbout.astro';
 
-import EmblaCarousel from '@/components/react/EmblaCarousel';
+import CoreFeatures from '@/components/core-features/CoreFeatures.astro';
+import Benefies from '@/components/home/benefies/Benefies.astro';
+import Foods from '@/components/home/foods/Foods.astro';
+import IntroVideo from '@/components/home/intro-video/IntroVide.astro';
+import { EmblaCarousel } from '@/components/react/EmblaCarousel';
 import Layout from '../layouts/Layout.astro';
 import './home.css';
 ---
@@ -26,4 +30,11 @@ import './home.css';
   <HomeAbout />
 
   <EmblaCarousel client:only="react" />
+
+  <IntroVideo />
+  <CoreFeatures />
+
+  <Foods />
+
+  <Benefies />
 </Layout>

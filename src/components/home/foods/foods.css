@@ -1,0 +1,117 @@
+.foods {
+  padding: 7em 1em 1em 1em;
+
+  background-image: url('/images/food/cookie.svg');
+  background-repeat: no-repeat;
+
+  background-position: top left;
+  background-size: clamp(8rem, 5vw, 15rem);
+
+  .foods__containe {
+  }
+  .foods__subtitle {
+    font-size: clamp(1.5rem, 1.5vw, 2rem);
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .foods__title {
+    font-size: clamp(3.5rem, 3.5vw, 5rem);
+    margin: 0;
+  }
+
+  .foods__list {
+    margin-bottom: 7.5rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    gap: 1em;
+
+    @media screen and (min-width: 1000px) {
+      width: 100%;
+      gap: 1rem;
+      grid-template-rows: repeat(5, 5rem);
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+  .foods__slider {
+    max-width: 73.125rem;
+    overflow: hidden;
+  }
+  .foods__images {
+    margin-bottom: 7.5rem;
+    .foods__images-list {
+      width: 300%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media screen and (min-width: 700px) {
+        width: 100%;
+        gap: 1em;
+      }
+    }
+    .foods__images-item {
+      width: calc(100% / 3);
+    }
+    .foods__images-img {
+      aspect-ratio: 16/9;
+    }
+  }
+}
+.food {
+  position: relative;
+}
+.food:hover .food__content {
+  opacity: 1;
+}
+.food__img {
+  border-radius: 0.4em;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+.food__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  opacity: 0;
+  color: var(--white-color);
+  background-color: rgba(22, 22, 22, 0.795);
+  transition: opacity 0.3s ease;
+}
+.food__title {
+  font-size: 1.5rem;
+  margin-bottom: 0.3em;
+}
+.food__description {
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .a {
+    grid-column: 1/3;
+    grid-row: 1/ 4;
+  }
+  .b {
+    /* grid-area: b; */
+    grid-column: 1/ 3;
+    grid-row: 4 / 6;
+  }
+  .c {
+    grid-column: 3/ 7;
+    grid-row: 1 / 3;
+  }
+  .d {
+    grid-column: 3/ 5;
+    grid-row: 3 / 6;
+  }
+  .e {
+    grid-column: 5/ 7;
+    grid-row: 3 / 6;
+  }
+}

@@ -1,0 +1,37 @@
+.benefies {
+  margin-bottom: 7.5rem;
+  background-color: var(--black2-color);
+}
+.benefies__list {
+  padding: 5em;
+
+  /* background-color: var(--black2-color); */
+  color: var(--white-color);
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13em, 1fr));
+  gap: 3em;
+}
+
+.benefie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.benefie__img {
+  font-size: 4.5rem;
+}
+.benefie__content {
+}
+.benefie__title,
+.benefie__subtitle {
+  font-family: 'Roboto';
+  font-weight: 700;
+  margin: 0;
+}
+.benefie__title {
+  font-size: clamp(3.7rem, 3.75vw, 4rem);
+}
+.benefie__subtitle {
+  font-size: 1rem;
+}

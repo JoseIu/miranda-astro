@@ -1,0 +1,52 @@
+---
+import { Icon } from 'astro-icon/components';
+import './roomCard.css';
+
+type Props = {
+  image: string;
+  title: string;
+  description: string;
+  price: number;
+};
+
+const { image, title, description, price } = Astro.props;
+---
+
+<article class="room">
+  <a href="#">
+    <img class="room__img" src={`/images/rooms/${image}`} alt="room" />
+  </a>
+  <div class="room__content">
+    <ul class="room__list">
+      <li class="room__li">
+        <Icon name="bed" class="room__icon" />
+      </li>
+      <li class="room__li">
+        <Icon name="wifi" class="room__icon" />
+      </li>
+      <li class="room__li">
+        <Icon name="car" class="room__icon" />
+      </li>
+      <li class="room__li">
+        <Icon name="snow" class="room__icon" />
+      </li>
+      <li class="room__li">
+        <Icon name="dumbbells" class="room__icon" />
+      </li>
+      <li class="room__li">
+        <Icon name="cigar" class="room__icon" />
+      </li>
+      <li class="room__li">
+        <Icon name="cup" class="room__icon" />
+      </li>
+    </ul>
+    <h3 class="room__title">{title}</h3>
+    <p class="room__description">
+      {description}
+    </p>
+    <div>
+      <span class="room__price">${price}/Night</span>
+      <button class="room__booking">Booking Now</button>
+    </div>
+  </div>
+</article>

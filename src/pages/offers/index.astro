@@ -1,15 +1,16 @@
 ---
+import HeroSection from '@/components/hero-section/HeroSection.astro';
+import OfferCard from '@/components/offer-card/OfferCard.astro';
 import Layout from '@/layouts/Layout.astro';
+import './offerPage.css';
+
+const OFFER_ROOMS = [1, 2, 4, 5];
 ---
 
 <Layout title="Offers">
-  <section class="offers wrapper">
-    <h1 class="offers__title">Offers</h1>
-    <p class="offers__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-      fugiat nulla pariatur.
-    </p>
-  </section>
+  <HeroSection backGroundImage="/images/offer-bg.webp" subtitle="The Ultimate Luxury" title="Our Offers" />
+
+  <div class="offers wrapper">
+    {OFFER_ROOMS.map(offer => <OfferCard />)}
+  </div>
 </Layout>

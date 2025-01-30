@@ -1,15 +1,17 @@
 ---
+import HeroSection from '@/components/hero-section/HeroSection.astro';
+import RoomCard from '@/components/room-card/RoomCard.astro';
+import { ROOMS_MOCK } from '@/constants/navLinks';
 import Layout from '@/layouts/Layout.astro';
+import './rooms.css';
+
+const ROOMS = ROOMS_MOCK;
 ---
 
 <Layout title="Rooms">
-  <section class="rooms wrapper">
-    <h1 class="rooms__title">Rooms</h1>
-    <p class="rooms__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-      fugiat nulla pariatur.
-    </p>
-  </section>
+  <HeroSection backGroundImage="/images/room-bg.webp" subtitle="The Ultimate Luxury" title="Ultimate Room" />
+
+  <div class="rooms-grid wrapper">
+    {ROOMS.map(room => <RoomCard {...room} />)}
+  </div>
 </Layout>

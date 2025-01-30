@@ -1,0 +1,29 @@
+---
+import './heroSection.css';
+
+type Props = {
+  backGroundImage: string;
+  title: string;
+  subtitle: string;
+};
+
+const { backGroundImage, subtitle, title } = Astro.props;
+---
+
+<section
+  class="hero-section"
+  style={`background-image: url(${backGroundImage});
+ background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+`}
+>
+  <div class="hero-section__content">
+    <div class="wrapper">
+      <div class="hero-section__text">
+        <p class="hero-section__subtitle">{subtitle}</p>
+        <h2 class="hero-section__title">{title}</h2>
+      </div>
+    </div>
+  </div>
+</section>

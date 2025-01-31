@@ -1,8 +1,142 @@
 ---
+import FeatureCard from '@/components/feature-card/FeatureCard.astro';
 import HeroSection from '@/components/hero-section/HeroSection.astro';
+import { CONTACT_FEATURES } from '@/constants/navLinks';
 import Layout from '@/layouts/Layout.astro';
+import { Icon } from 'astro-icon/components';
 ---
 
+<script>
+  const form = document.querySelector('.form') as HTMLFormElement;
+
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+  });
+</script>
 <Layout title="Contact">
   <HeroSection backGroundImage="/images/contact-bg.webp" subtitle="The Ultimate Luxury" title="Contact Us" />
+
+  <div class="contact wrapper">
+    <FeatureCard features={CONTACT_FEATURES} />
+
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d121193.50620953986!2d-68.89190743907771!3d18.333726907542523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x8ea8abd541e1c75f%3A0x6d894f9bbf94a8b0!2sCarr.%20Bayahibe%2C%20Dominicus%2023000%2C%20Rep%C3%BAblica%20Dominicana!3m2!1d18.3337446!2d-68.8095057!5e0!3m2!1ses!2ses!4v1718802629017!5m2!1ses!2ses"
+      width="600"
+      height="600"
+      class="contact__map"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <form class="form" action="POST">
+      <div class="form__container">
+        <div class="form__row">
+          <label class="form__label" for="name">
+            <Icon name="profile" class="form__icon" />
+          </label>
+
+          <input class="form__input" type="text" name="name" id="name" placeholder="Your full name..." />
+        </div>
+
+        <div class="form__row">
+          <label class="form__label" for="email">
+            <Icon name="email" class="form__icon" />
+          </label>
+
+          <input
+            class="form__input"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter email address.."
+          />
+        </div>
+
+        <div class="form__row">
+          <label class="form__label" for="phone">
+            <Icon name="phone" class="form__icon" />
+          </label>
+
+          <input class="form__input" type="number" name="phone" id="phone" placeholder="Add phone number.." />
+        </div>
+
+        <div class="form__row">
+          <label class="form__label" for="subject">
+            <Icon name="book" class="form__icon" />
+          </label>
+
+          <input class="form__input" type="text" name="subject" id="subject" placeholder="Enter subject..." />
+        </div>
+      </div>
+
+      <div class="form__row">
+        <textarea
+          class="form__input form__input--message"
+          name="message"
+          id="message"
+          placeholder="Enter message..."></textarea>
+      </div>
+
+      <button class="form__btn button" type="submit">send</button>
+    </form>
+  </div>
 </Layout>
+
+<style>
+  .contact {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+  .contact__map {
+    width: 100%;
+  }
+  .form {
+    max-width: 100%;
+    padding: 1rem;
+    margin-bottom: 10rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+  .form__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .form__row {
+    position: relative;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(248, 248, 248, 1);
+  }
+  .form__row:focus-within {
+    outline: 2px solid rgba(190, 173, 142, 1);
+  }
+  .form__icon {
+    position: absolute;
+    top: 35%;
+    left: 1rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    color: rgba(190, 173, 142, 1);
+  }
+  .form__input {
+    width: 100%;
+    outline: none;
+
+    padding: 1.5rem 0.5rem 1.5rem 3rem;
+  }
+  .form__input--message {
+    min-height: 10rem;
+    max-height: 15rem;
+  }
+
+  .form__btn {
+    margin-inline: auto;
+  }
+</style>

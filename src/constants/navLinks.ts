@@ -1,3 +1,5 @@
+import type { Feature } from '@/interfaces/featureCar.interface';
+
 export const NAV_LINKS = [
   { href: '/about-us', text: 'About us' },
   { href: '/rooms', text: 'Rooms' },
@@ -82,5 +84,86 @@ export const ROOMS_MOCK: Rooms[] = [
     description:
       'An elegant executive room designed with business travelers in mind, offering comfort and functionality.',
     price: 220
+  }
+];
+
+export const CORE_FEATURES: Feature[] = [
+  {
+    title: 'Have High Rating',
+    image: {
+      src: ' /images/features/starts.svg',
+      alt: 'High Rating'
+    },
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.'
+  },
+  {
+    title: 'Quiet Hours',
+    image: {
+      src: '/images/features/clock.svg',
+      alt: 'Quiet Hours'
+    },
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..'
+  },
+  {
+    title: 'Best Locations',
+    image: {
+      src: '/images/features/location.svg',
+      alt: 'best location icon'
+    },
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.'
+  },
+  {
+    title: 'Free Cancellation',
+    image: {
+      src: '/images/features/clock-cross.svg',
+      alt: 'free cancellation icon'
+    },
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.'
+  },
+  {
+    title: 'Payment Options',
+    image: {
+      src: '/images/features/credit.svg',
+      alt: 'payment options icon'
+    },
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.'
+  },
+  {
+    title: 'Special Offers',
+    image: {
+      src: '/images/features/offer.svg',
+      alt: 'special offers icon'
+    },
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.'
+  }
+];
+
+export const CONTACT_FEATURES: Feature[] = [
+  {
+    title: 'Hotel Address',
+    icon: {
+      name: 'location'
+    },
+    description: '19/A, Cirikon City hall Tower New York, NYC'
+  },
+  {
+    title: 'Phone Number',
+    icon: {
+      name: 'phone'
+    },
+    description: '+ 97656 8675 7864 7 + 876 766 8675 765 6'
+  },
+  {
+    title: 'Email',
+    icon: {
+      name: 'email'
+    },
+    description: 'info@webmail.com jobs.webmail@mail.com'
   }
 ];

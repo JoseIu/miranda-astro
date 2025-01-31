@@ -1,0 +1,31 @@
+---
+import type { Feature } from '@/interfaces/featureCar.interface';
+import { Icon } from 'astro-icon/components';
+import './featureCard.css';
+
+type Props = {
+  isDark?: boolean;
+  features: Feature[];
+};
+const { isDark, features } = Astro.props;
+const featureClass = isDark && 'features--dark';
+---
+
+<div class="features__list">
+  {
+    features.map(feature => (
+      <article class={`feature ${featureClass}`}>
+        {feature.image ? (
+          <img class="feature__img" src={feature.image.src} alt={feature.image.alt} loading="lazy" />
+        ) : (
+          <Icon name={feature.icon?.name} class="feature__icon" />
+        )}
+
+        <div class="feature__content">
+          <h3 class="feature__title">{feature.title}</h3>
+          <p class="feature__desctiption">{feature.description}</p>
+        </div>
+      </article>
+    ))
+  }
+</div>

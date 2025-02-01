@@ -3,13 +3,11 @@
   background-color: var(--black2-color);
 }
 .benefies__list {
-  padding: 5em;
-
-  /* background-color: var(--black2-color); */
+  padding: 5rem 1rem;
   color: var(--white-color);
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(13em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
   gap: 3em;
 }
 
@@ -22,6 +20,7 @@
   font-size: 4.5rem;
 }
 .benefie__content {
+  text-align: center;
 }
 .benefie__title,
 .benefie__subtitle {

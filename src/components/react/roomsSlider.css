@@ -10,7 +10,7 @@
   overflow: hidden;
 }
 .embla__viewport {
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
 }
 .embla__container {
   display: flex;

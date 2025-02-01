@@ -1,6 +1,6 @@
 .room {
   .room__img {
-    aspect-ratio: 16/12;
+    aspect-ratio: 16/9;
     border-radius: 0.4rem;
   }
   .room__content {
@@ -38,7 +38,7 @@
     margin: 0;
   }
   .room__description {
-    text-align: start;
+    text-wrap: pretty;
   }
 
   .room__price {

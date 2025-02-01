@@ -1,5 +1,8 @@
 ---
+import homeImage2 from '@/assets/images/about-2.webp';
+import homeImage1 from '@/assets/images/about.webp';
 import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
 import './homeAbout.css';
 ---
 
@@ -19,7 +22,13 @@ import './homeAbout.css';
 
   <div class="about__images">
     <article class="card card--order">
-      <img class="card__image card__image--order" src="./images/about.webp" alt="about image" />
+      <Image
+        width={400}
+        height={220}
+        class="card__image card__image--order"
+        src={homeImage1}
+        alt="hotel look"
+      />
 
       <div class="card__content card__content--bg">
         <Icon class="card__content-image" name="cardPeople" />
@@ -31,7 +40,7 @@ import './homeAbout.css';
       </div>
     </article>
     <article class="card">
-      <img class="card__image" src="./images/about-2.webp" alt="about image" />
+      <Image width={300} height={360} class="card__image" src={homeImage2} alt="hotel look" />
 
       <div class="card__content card__content--dark">
         <Icon class="card__content-image" name="calendar" />

@@ -1,4 +1,12 @@
 ---
+import cheesePlate from '@/assets/images/food/cheese_plate.webp';
+import chinaFood from '@/assets/images/food/chia_oatmeal.webp';
+import coffee from '@/assets/images/food/coffee.webp';
+import eggsBacos from '@/assets/images/food/eggs_bacon.webp';
+import fruiteParfait from '@/assets/images/food/fruit_parfait.webp';
+import marmalade from '@/assets/images/food/marmalade.webp';
+import pasta from '@/assets/images/food/pasta.webp';
+import { Image } from 'astro:assets';
 import './foods.css';
 ---
 
@@ -8,7 +16,7 @@ import './foods.css';
     <h3 class="foods__title old">Our Foods Menu</h3>
     <div class="foods__list">
       <article class="food a">
-        <img class="food__img" src="/images/food/eggs_bacon.webp" loading="lazy" alt="food" />
+        <Image class="food__img" width={500} height={300} src={eggsBacos} alt="eggs and bacon" />
         <div class="food__content">
           <h2 class="food__title old">Eggs & Bacon</h2>
           <p class="food__description">
@@ -17,7 +25,7 @@ import './foods.css';
         </div>
       </article>
       <article class="food b">
-        <img class="food__img" src="/images/food/fruit_parfait.webp" loading="lazy" alt="food" />
+        <Image class="food__img" width={500} height={300} src={fruiteParfait} alt="fruit parfait" />
         <div class="food__content">
           <h2 class="food__title old">Fruit Parfait</h2>
           <p class="food__description">
@@ -26,7 +34,7 @@ import './foods.css';
         </div>
       </article>
       <article class="food c">
-        <img class="food__img" src="/images/food/coffee.webp" loading="lazy" alt="food" />
+        <Image class="food__img" width={900} height={300} src={coffee} alt="coffee" />
         <div class="food__content">
           <h2 class="food__title old">Tea or Coffee</h2>
           <p class="food__description">
@@ -35,7 +43,7 @@ import './foods.css';
         </div>
       </article>
       <article class="food d">
-        <img class="food__img" src="/images/food/marmalade.webp" loading="lazy" alt="food" />
+        <Image class="food__img" width={500} height={400} src={marmalade} alt="marmalade" />
         <div class="food__content">
           <h2 class="food__title old">Marmalade Selection</h2>
           <p class="food__description">
@@ -44,7 +52,7 @@ import './foods.css';
         </div>
       </article>
       <article class="food e">
-        <img class="food__img" src="/images/food/chia_oatmeal.webp" loading="lazy" alt="food" />
+        <Image class="food__img" width={500} height={200} src={chinaFood} alt="china food" />
         <div class="food__content">
           <h2 class="food__title old">Chia Oatmeal</h2>
           <p class="food__description">
@@ -54,7 +62,7 @@ import './foods.css';
       </article>
       <!-- 6 -->
       <article class="food f">
-        <img class="food__img" src="/images/food/chia_oatmeal.webp" loading="lazy" alt="food" />
+        <Image class="food__img" width={500} height={200} src={cheesePlate} alt="cheese Plate" />
         <div class="food__content">
           <h2 class="food__title old">Cheese Plate</h2>
           <p class="food__description">
@@ -63,9 +71,9 @@ import './foods.css';
         </div>
       </article>
       <article class="food g">
-        <img class="food__img" src="/images/food/chia_oatmeal.webp" loading="lazy" alt="food" />
+        <Image class="food__img" width={500} height={200} src={pasta} alt="pasta food" />
         <div class="food__content">
-          <h2 class="food__title old">Cheese Plate</h2>
+          <h2 class="food__title old">Pasta</h2>
           <p class="food__description">
             Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.
           </p>

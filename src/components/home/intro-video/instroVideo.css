@@ -63,9 +63,14 @@
   }
 }
 .intro__video-container {
+  padding: 0.3rem;
   flex-grow: 1;
   flex-basis: 20rem;
-  padding: 0.3rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .intro__video {
   aspect-ratio: 16 / 9;

@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
 import './roomCard.css';
 
 type Props = {
@@ -14,7 +15,8 @@ const { image, title, description, price } = Astro.props;
 
 <article class="room">
   <a href="#">
-    <img class="room__img" src={`/images/rooms/${image}`} alt="room" />
+    <Image width={700} height={300} class="room__img" src={`/images/rooms/${image}`} alt={title} />
+    <!-- <img class="room__img" src={`/images/rooms/${image}`} alt="room" /> -->
   </a>
   <div class="room__content">
     <ul class="room__list">

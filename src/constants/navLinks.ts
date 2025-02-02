@@ -1,4 +1,5 @@
 import type { Feature } from '@/interfaces/featureCar.interface';
+import { v4 as uuid } from 'uuid';
 
 export const NAV_LINKS = [
   { href: '/about-us', text: 'About us' },
@@ -8,6 +9,7 @@ export const NAV_LINKS = [
 ];
 
 type Rooms = {
+  id: string;
   image: string;
   title: string;
   description: string;
@@ -16,6 +18,7 @@ type Rooms = {
 
 export const ROOMS_MOCK: Rooms[] = [
   {
+    id: uuid(),
     image: 'room.webp',
     title: 'Single Room',
     description:
@@ -23,6 +26,7 @@ export const ROOMS_MOCK: Rooms[] = [
     price: 100
   },
   {
+    id: uuid(),
     image: 'room2.webp',
     title: 'Double Room',
     description:
@@ -30,6 +34,7 @@ export const ROOMS_MOCK: Rooms[] = [
     price: 150
   },
   {
+    id: uuid(),
     image: 'room3.webp',
     title: 'Family Room',
     description:
@@ -37,6 +42,7 @@ export const ROOMS_MOCK: Rooms[] = [
     price: 200
   },
   {
+    id: uuid(),
     image: 'room4.webp',
     title: 'Presidential Room',
     description:
@@ -44,6 +50,7 @@ export const ROOMS_MOCK: Rooms[] = [
     price: 300
   },
   {
+    id: uuid(),
     image: 'room5.webp',
     title: 'Suite Room',
     description:
@@ -51,6 +58,7 @@ export const ROOMS_MOCK: Rooms[] = [
     price: 250
   },
   {
+    id: uuid(),
     image: 'room6.webp',
     title: 'Luxury Room',
     description:
@@ -58,6 +66,7 @@ export const ROOMS_MOCK: Rooms[] = [
     price: 400
   },
   {
+    id: uuid(),
     image: 'room7.webp',
     title: 'Economy Room',
     description:
@@ -65,6 +74,7 @@ export const ROOMS_MOCK: Rooms[] = [
     price: 80
   },
   {
+    id: uuid(),
     image: 'room8.webp',
     title: 'Standard Room',
     description:
@@ -72,6 +82,7 @@ export const ROOMS_MOCK: Rooms[] = [
     price: 120
   },
   {
+    id: uuid(),
     image: 'room9.webp',
     title: 'Deluxe Room',
     description:
@@ -79,6 +90,7 @@ export const ROOMS_MOCK: Rooms[] = [
     price: 180
   },
   {
+    id: uuid(),
     image: 'room10.webp',
     title: 'Executive Room',
     description:

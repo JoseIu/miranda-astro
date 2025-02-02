@@ -4,17 +4,18 @@ import { Image } from 'astro:assets';
 import './roomCard.css';
 
 type Props = {
+  id: string;
   image: string;
   title: string;
   description: string;
   price: number;
 };
 
-const { image, title, description, price } = Astro.props;
+const { image, title, description, price, id } = Astro.props;
 ---
 
 <article class="room">
-  <a href="#">
+  <a href={`/rooms/room/${id}`}>
     <Image width={700} height={300} class="room__img" src={`/images/rooms/${image}`} alt={title} />
     <!-- <img class="room__img" src={`/images/rooms/${image}`} alt="room" /> -->
   </a>

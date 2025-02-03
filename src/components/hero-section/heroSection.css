@@ -1,13 +1,18 @@
 .hero-section {
   position: relative;
+  height: 550px;
+  padding: 0 1rem;
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  @media screen and (max-width: 500px) {
+    height: 400px;
+  }
 }
 .hero-section__content {
-  padding: 9rem 1rem 0 1rem;
-  margin-bottom: 3rem;
-  height: 550px;
-  color: var(--white-color);
-
   width: 100%;
+  color: var(--white-color);
 }
 .hero-section__text {
   position: sticky;

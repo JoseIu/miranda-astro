@@ -2,7 +2,8 @@
   padding: 1rem;
 }
 .about-video__video {
-  max-width: 62.5rem;
+  /* max-width: 62.5rem; */
+  width: 100%;
   aspect-ratio: 16/9;
   margin-bottom: 3em;
 }
@@ -11,7 +12,7 @@
   max-width: 59.25rem;
   font-size: clamp(2rem, 4vw, 4rem);
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 .about-video__video,
 .about-video__title {

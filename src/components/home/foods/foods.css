@@ -7,8 +7,6 @@
   background-position: top left;
   background-size: clamp(8rem, 5vw, 15rem);
 
-  .foods__containe {
-  }
   .foods__subtitle {
     font-size: clamp(1.5rem, 1.5vw, 2rem);
     font-weight: 600;

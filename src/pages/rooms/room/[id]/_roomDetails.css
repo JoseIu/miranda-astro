@@ -63,9 +63,9 @@
 }
 .room-description {
   padding: 1rem;
+  margin-bottom: 3rem;
   max-width: 48.125rem;
 
-  margin-bottom: 10rem;
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
@@ -73,10 +73,9 @@
 
 .room-founder {
   padding: 1rem;
-  margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
-  row-gap: 8rem;
+  row-gap: 2rem;
 }
 .founder {
   padding: 3rem 1rem;
@@ -101,6 +100,10 @@
     row-gap: 1rem;
   }
   .founder__title {
+    font-family: var(--main-font);
+    font-weight: 600;
+    margin: 0;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
   }
   .founder__subtitle {
     color: rgba(189, 172, 141, 1);
@@ -109,13 +112,14 @@
     line-height: 1.5rem;
   }
 }
-.room-cancellation {
-  .room-cancellation __title {
-    font-size: clamp(1.3rem, 2vw, 2rem);
-  }
-  .room-cancellation __decription {
-    max-width: 41.25rem;
-  }
+
+.room-cancellation__title {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.room-cancellation__decription {
+  /* max-width: 41.25rem; */
 }
 .related-rooms {
   padding: 1rem;
@@ -123,9 +127,11 @@
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
-  .related-rooms __title {
-    font-size: clamp(1.5rem, 2vw, 2rem);
-  }
+}
+.related-rooms__title {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 500;
+  margin-bottom: 0;
 }
 .offer__aminities {
   margin-bottom: 2rem;

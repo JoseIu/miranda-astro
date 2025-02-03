@@ -21,8 +21,6 @@
       padding-top: 6em;
     }
   }
-  .about__bg {
-  }
   .about__subtitle {
     font-weight: 900;
     text-transform: uppercase;
@@ -89,7 +87,7 @@
   .card__content--bg {
     padding: 1rem;
     order: 1;
-    background-image: url(./images/people.webp);
+    background-image: url(/images/people.webp);
     background-repeat: no-repeat;
     background-position: top 3em right 1.5em;
   }

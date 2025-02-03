@@ -15,7 +15,12 @@ const { image, title, description, price, id } = Astro.props;
 
 <article class="room">
   <a href={`/rooms/room/${id}`}>
-    <img class="room__img" src={`/images/rooms/${image}`} alt="room" />
+    <img
+      class="room__img"
+      src={`/images/rooms/${image}`}
+      alt={title}
+      transition:name={`room-${id}-${image.replace('.webp', '')}`}
+    />
   </a>
   <div class="room__content">
     <ul class="room__list">

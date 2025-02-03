@@ -16,7 +16,7 @@ export const getStaticPaths = (() => {
 
 const { id } = Astro.params;
 const { room } = Astro.props;
-const ROOMS = ROOMS_MOCK.slice(0, 3);
+const ROOMS = ROOMS_MOCK.filter(r => r.id !== id).slice(0, 3);
 ---
 
 <Layout title={room.title}>
@@ -25,7 +25,12 @@ const ROOMS = ROOMS_MOCK.slice(0, 3);
   <section class="wrapper">
     <div class="room-details">
       <div class="room-detail">
-        <img class="room-detail__image" src={`/images/rooms/${room.image}`} alt="room" />
+        <img
+          class="room-detail__image"
+          src={`/images/rooms/${room.image}`}
+          alt="room"
+          transition:name={`room-${id}-${room.image.replace('.webp', '')}`}
+        />
         <div class="room-detail__info">
           <div>
             <span class="subtitle">Double Bed</span>

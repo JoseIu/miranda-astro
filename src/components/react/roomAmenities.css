@@ -1,0 +1,15 @@
+.slider__item-list {
+  padding: 0.4rem 0;
+  position: absolute;
+  top: 0;
+  left: 13%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: var(--white-color);
+  width: 80%;
+}
+.slider__item-li {
+  width: clamp(1rem, 3vw, 1.3rem);
+}

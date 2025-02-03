@@ -70,12 +70,19 @@
 
 .slider__item-img {
   aspect-ratio: 16/10;
+  border-radius: 0.25rem 0.25rem 0 0;
 }
-.slider__item-content {
-}
+
 .slider__item-description {
-  padding: 0.5rem;
-  background-color: yellow;
+  padding: 1rem;
+  background-color: var(--white-color);
+  box-shadow: var(--box-shadow);
+  border-radius: 0 0 0.25rem 0.25rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .slider__item-title {
   font-weight: 600;
@@ -84,7 +91,10 @@
   margin: 0;
 }
 .slider__item-text {
+  text-wrap: pretty;
 }
 .slider__item-price {
   font-size: clamp(1.6rem, 2vw, 1.8rem);
+  color: var(--mustard-color);
+  font-weight: 700;
 }

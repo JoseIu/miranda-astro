@@ -1,6 +1,7 @@
 import type { EmblaOptionsType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
 
+import { RoomAmenities } from './RoomAmenities';
 import './roomsSlider.css';
 import { NextButton, PrevButton, usePrevNextButtons } from './usePrevNextButtons';
 
@@ -54,31 +55,8 @@ export const EmblaCarousel = () => {
           {ROOMS_SLIDER.map(room => (
             <article className="embla__slide slider" key={room.image}>
               <img className="slider__item-img" src={room.image} alt={room.title} />
-              {/* <h2 className="embla__slide__number">{index + 1}</h2> */}
               <div className="slider__item-content">
-                {/* <ul className="slider__item-list">
-                  <li className="slider__item-li">
-                    <Icon name="bed" />
-                  </li>
-                  <li className="slider__item-li">
-                    <Icon name="wifi" />
-                  </li>
-                  <li className="slider__item-li">
-                    <Icon name="car" />
-                  </li>
-                  <li className="slider__item-li">
-                    <Icon name="snow" />
-                  </li>
-                  <li className="slider__item-li">
-                    <Icon name="dumbbells" />
-                  </li>
-                  <li className="slider__item-li">
-                    <Icon name="cigar" />
-                  </li>
-                  <li className="slider__item-li">
-                    <Icon name="cup" />
-                  </li>
-                </ul> */}
+                <RoomAmenities />
 
                 <div className="slider__item-description">
                   <div>

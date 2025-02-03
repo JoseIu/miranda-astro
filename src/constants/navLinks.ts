@@ -16,6 +16,11 @@ type Rooms = {
   price: number;
 };
 
+export type RoomOffer = Rooms & {
+  roomType: string;
+  oldPrice: number;
+};
+
 export const ROOMS_MOCK: Rooms[] = [
   {
     id: uuid(),
@@ -96,6 +101,69 @@ export const ROOMS_MOCK: Rooms[] = [
     description:
       'An elegant executive room designed with business travelers in mind, offering comfort and functionality.',
     price: 220
+  }
+];
+
+export const ROOMS_OFFERS: RoomOffer[] = [
+  {
+    id: uuid(),
+    title: 'Luxury Double Bed',
+    roomType: 'Single Room',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    image: './images/rooms/big/room-big1.webp',
+    price: 345,
+    oldPrice: 500
+  },
+  {
+    id: uuid(),
+    title: 'Elegant King Bed',
+    roomType: 'Double Room',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    image: './images/rooms/big/room-big2.webp',
+    price: 420,
+    oldPrice: 600
+  },
+  {
+    id: uuid(),
+    title: 'Modern Queen Bed',
+    roomType: 'Single Room',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    image: './images/rooms/big/room-big3.webp',
+    price: 390,
+    oldPrice: 550
+  },
+  {
+    id: uuid(),
+    title: 'Classic Twin Beds',
+    roomType: 'Double Room',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    image: './images/rooms/big/room-big4.webp',
+    price: 275,
+    oldPrice: 450
+  },
+  {
+    id: uuid(),
+    title: 'Cozy Full Bed',
+    roomType: 'Single Room',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    image: './images/rooms/big/room-big5.webp',
+    price: 310,
+    oldPrice: 490
+  },
+  {
+    id: uuid(),
+    title: 'Spacious Suite Bed',
+    roomType: 'Suite Room',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    image: './images/rooms/big/room-big6.webp',
+    price: 520,
+    oldPrice: 750
   }
 ];
 

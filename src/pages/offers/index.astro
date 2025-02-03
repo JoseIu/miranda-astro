@@ -1,16 +1,17 @@
 ---
 import HeroSection from '@/components/hero-section/HeroSection.astro';
 import OfferCard from '@/components/offer-card/OfferCard.astro';
+import { ROOMS_OFFERS } from '@/constants/navLinks';
 import Layout from '@/layouts/Layout.astro';
 
-const OFFER_ROOMS = [1, 2, 4, 5];
+const OFFER_ROOMS = ROOMS_OFFERS;
 ---
 
 <Layout title="Offers">
   <HeroSection backGroundImage="/images/offer-bg.webp" subtitle="The Ultimate Luxury" title="Our Offers" />
 
   <div class="offers wrapper">
-    {OFFER_ROOMS.map(offer => <OfferCard />)}
+    {OFFER_ROOMS.map(offer => <OfferCard room={offer} />)}
   </div>
 </Layout>
 
@@ -18,13 +19,13 @@ const OFFER_ROOMS = [1, 2, 4, 5];
   .offers {
     padding: 1rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
 
     gap: 1rem;
   }
   @media screen and (min-width: 512px) {
     .offers {
-      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(23rem, 1fr));
     }
   }
   @media screen and (min-width: 750px) {

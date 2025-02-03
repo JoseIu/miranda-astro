@@ -19,6 +19,13 @@ const { room } = Astro.props;
 const ROOMS = ROOMS_MOCK.filter(r => r.id !== id).slice(0, 3);
 ---
 
+<script>
+  const roomFom = document.querySelector('.room-form') as HTMLFormElement;
+  roomFom.addEventListener('submit', e => {
+    e.preventDefault();
+  });
+</script>
+
 <Layout title={room.title}>
   <HeroSection backGroundImage="/images/room-bg.webp" subtitle="The Ultimate Luxury" title="Ultimate Room" />
 
@@ -39,7 +46,7 @@ const ROOMS = ROOMS_MOCK.filter(r => r.id !== id).slice(0, 3);
           <span class="room-detail__price">$345/night</span>
         </div>
       </div>
-      <form class="room-form" action="" method="post">
+      <form class="room-form" method="post">
         <div class="room-form__row">
           <label for="name">Name</label>
           <input class="room-form__input" type="text" name="name" id="name" placeholder="your name.." />
@@ -70,7 +77,7 @@ const ROOMS = ROOMS_MOCK.filter(r => r.id !== id).slice(0, 3);
             id="special_request"></textarea>
         </div>
 
-        <button class="room-form__btn button" type="submit">Book now</button>
+        <button class="room-form__btn button" disabled type="submit">Book now</button>
       </form>
     </div>
     <div class="room-description">

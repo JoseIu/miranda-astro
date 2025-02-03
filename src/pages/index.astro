@@ -10,14 +10,14 @@ import { EmblaCarousel } from '@/components/react/EmblaCarousel';
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Hotel Miranda">
+<Layout title="Hotel Miranda" preload>
   <section class="home">
     <div class="home__content wrapper">
       <span class="home__subtitle">THE ULTIMATE LUXURY EXPERIENCE</span>
       <h2 class="home__title">The Perfect Base For You</h2>
 
       <div class="home__tbns">
-        <a class="home__btn home__btn--mustard" href="#">Take a Tour</a>
+        <a class="home__btn home__btn--mustard btn-mustard" href="#">Take a Tour</a>
         <a class="home__btn" href="#">Learn more</a>
       </div>
     </div>
@@ -52,29 +52,43 @@ import Layout from '../layouts/Layout.astro';
     background-size: cover;
 
     background-attachment: fixed;
+
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 500px) {
+      height: 500px;
+    }
   }
   .home__content {
-    padding: 10em 0 0 0;
+    width: 100%;
+    @media screen and (max-width: 500px) {
+      padding-top: 5rem;
+    }
   }
 
   .home__subtitle {
     font-size: clamp(0.9, 1vw, 0.875rem);
+    margin-bottom: 1rem;
     display: block;
   }
   .home__title {
     max-width: 43.3125rem;
-    margin: 0;
-    font-size: clamp(3.3rem, 10vw, 7.1rem);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: clamp(3.2rem, 10vw, 7.1rem);
     letter-spacing: 0.1375rem;
     text-wrap: wrap;
   }
   .home__tbns {
+    max-width: 40rem;
     display: flex;
-    gap: 1rem;
     flex-wrap: wrap;
+    gap: 0.5rem;
   }
   .home__btn {
-    width: 13.5rem;
+    flex-grow: 1;
+    flex-basis: 13rem;
     height: 3.75rem;
 
     text-transform: uppercase;
@@ -87,10 +101,8 @@ import Layout from '../layouts/Layout.astro';
     margin-bottom: 1em;
   }
   .home__btn--mustard {
-    background-color: var(--mustard-color);
     outline: none;
   }
-
   .home__date {
     background-color: var(---black-color);
   }

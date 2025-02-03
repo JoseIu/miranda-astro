@@ -95,6 +95,6 @@
 }
 .slider__item-price {
   font-size: clamp(1.6rem, 2vw, 1.8rem);
-  color: var(--mustard-color);
+  color: rgb(129 116 91);
   font-weight: 700;
 }

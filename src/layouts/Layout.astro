@@ -6,9 +6,10 @@ import '../styles/reset.css';
 
 interface Props {
   title?: string;
+  preload?: boolean;
 }
 
-const { title } = Astro.props;
+const { title, preload } = Astro.props;
 
 const layOutTitle = title ?? 'Hotel Miranda';
 ---
@@ -20,6 +21,7 @@ const layOutTitle = title ?? 'Hotel Miranda';
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.webp" />
     <meta name="generator" content={Astro.generator} />
+    {preload && <link rel="preload" as="image" href="/images/bg-home-2.webp" />}
     <title>{layOutTitle}</title>
     <ClientRouter />
   </head>
@@ -58,5 +60,10 @@ const layOutTitle = title ?? 'Hotel Miranda';
   }
   .margin-bottom {
     margin-bottom: 7rem;
+  }
+  .btn-mustard {
+    background-color: rgb(129 116 91);
+    outline: none;
+    /* color: var(--black-color); */
   }
 </style>

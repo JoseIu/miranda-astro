@@ -1,5 +1,4 @@
 .intro {
-  margin-bottom: 7em;
   color: var(--white-color);
   background: rgb(34, 34, 34);
   @media screen and (min-width: 865px) {

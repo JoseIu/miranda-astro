@@ -1,7 +1,6 @@
 .about {
   padding: 1em;
   font-weight: 400;
-  margin-bottom: 10em;
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
